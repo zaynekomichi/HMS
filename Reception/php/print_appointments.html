@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			font-family: Rubik, 'sans-serif';
+			font-weight: normal;
+			text-align:center;
+		}
+		h1{
+			font-weight: normal;
+		}
+		.flex-row table{
+			width:800px;
+			text-align: center;
+		}
+		.flex-row thead{
+			background-color:#00aeff;
+		}
+		.flex-row th{
+			font-weight: normal;
+			color:white;
+		}
+
+		.flex-row tr:even{
+			background-color:seablue;
+		}
+		button{
+      width:120px;
+      background-color: white;
+      border: 1px solid #00aeff;
+      border-radius: 25px;
+      height: 25px;
+      border-top-left-radius: 0px;
+    }
+
+    button:hover{
+      transition: 0.5s;
+      background-color: #00aeff;
+      border-bottom-right-radius: 0px;
+      transform: scale(1.1);
+      color:white;
+    }
+	</style>
+</head>
+<body >
+<div id="second_container">
+		  <div class="design">
+      <h1>Appointments</h1>
+	<div align="center">
+
+	</div>
+
+
+
+
+
+
+	<div class="flex-row">
+		<table align="center"  cellspacing="0" id="f-table">
+		<thead>
+
+			<th>Time</th>
+			<th>Name</th>
+			<th>Reason</th>
+			<th>Gestation</th>
+			<th>Phone Number</th>
+	
+
+		</thead>
+		<tbody id="t-printout">
+			
+		</tbody>
+	</table>
+
+		</div>
+	</div>
+	</div>
+	</div>
+	<script src="../script/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+	let first = $('#t-printout').load("http://192.168.1.23/Ark/Tables/print_table.php");
+		});
+		function p(){
+			window.print();
+		}
+		setTimeout(p,2000);
+	</script>
+
+
+ 
+</html>
+

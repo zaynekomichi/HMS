@@ -1,0 +1,101 @@
+
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">-->
+    <style type="text/css">
+        body{ font-family: 'Rubik' }
+        .wrapper{ width: 250px; height: 100%; padding: 20px;  border-radius: 25px;}
+
+       .wrapper label{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+        .wrapper h2{
+            font-weight: normal;
+            color: white;
+        }
+
+        .form-group input{
+            text-align: center;
+            font-family: 'Rubik';
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #00aeff;
+            width:250px;
+            height:24px;
+        }
+        .form-group button{
+            width:100px;
+            background-color: white;
+            border:1px solid #00aeff;
+            font-family: 'Rubik';
+            border-radius: 10px;
+            height: 25px;
+        }
+
+        button:hover{
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
+    </style>
+
+   
+    <div class="wrapper" >
+        <h2> Midwives Login</h2>
+        <p id="message">Please fill in your credentials to login.</p>
+        <!--<form>-->
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="Username" name="username" class="form-control" >
+                <span class="help-block"></span>
+            </div>    
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="Password" name="password" class="form-control">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <button id="login">Login</button>
+            </div>
+    </div>  
+    <script type="text/javascript">
+     $(function(){
+            $('#login').on('click', function(){
+                let username = $('#Username').val();
+                let password = $('#Password').val();
+                if(username == "" && password == ""){
+                     $('#Username, #Password').css({
+                        "borderColor":"red",
+                     });
+                }else{
+                    $.ajax({
+                        url:"http://192.168.1.23/Ark/Login/midwives_login.php",
+                        type:"POST",
+                        data:{
+                            "reception_login":1,
+                            "username":username,
+                            "password":password
+                        },
+                        success: function(response){
+                            if(response == "verified"){
+                                location.replace("Midwives/index.html?name="+$('#Username').val());
+                            }else if(response == "not verified"){
+                               $('#message').text("Details are incorrect");
+                                $('#Username, #Password').css({
+                                    "borderColor":"red",
+                                });
+                            }else if(response == "trespassing"){
+                                $('#message').text("Please enter into your designated account only");
+                                 let change_color = document.getElementById('message');
+                                 change_color.style.color = "purple";
+                            }else{
+                                $('#message').val("Please check if your network is available.");
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+

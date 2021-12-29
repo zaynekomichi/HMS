@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="top-nav-bar">
+		<div class="top-flex">
+			<img id="logo" src="css/img/pplogo.png">
+		</div>
+		<div class="top-flex">
+			<input id="top-search-bar" autocomplete="off" type="" name="" placeholder="search patients">
+			
+		</div>
+		<div id="con_results">
+		<button id="close_nav_search" style="display: none; text-align: center; margin-bottom: 5px;"  type="button">Close</button>
+	</div>
+		<div id="nav_results"></div>
+		
+		<div class="top-flex">	
+			<button id="user_acc_page" class="nav-item" onclick="acc();" autocomplete="off">
+			<img  id='user_acc'>
+		</button>
+			<button id="logout_btn" class="nav-item"><img src="css/img/045-delivery truck.png" class="logout_nav"></button>
+		</div>
+		
+	</div>
+	<br>
+	<div style="height: 50px;"></div>
+	<div id="side-nav-bar">
+		<br>
+		<button onclick="dashboard();" class="side-nav-btn-btn"><img src="css/img/store.png" class="icon-nav">Dashboard</button>
+		<br>
+		<button onclick="add_booking();" class="side-nav-btn-btn"><img src="css/img/047-confirm.png" class="icon-nav">Add Booking</button>
+		<br>
+		<button onclick="anc();" class="side-nav-btn-btn"><img src="css/img/013-notification bell.png " class="icon-nav">T-Appointments</button>
+		<br>
+	  <button onclick="f_appointments();" class="side-nav-btn-btn"><img src="css/img/008-calendar.png" class="icon-nav">F-Appointments</button>
+	  <br>
+		<button onclick="history();" class="side-nav-btn-btn"><img src="css/img/shopping-list.png" class="icon-nav">History</button>
+		<br>
+		<button onclick="view_bookings();" class="side-nav-btn-btn"><img src="css/img/036-return box.png" class="icon-nav">View Bookings</button>
+		<br>
+		<button onclick="settings();" class="side-nav-btn-btn"><img src="css/img/settings.png" class="icon-nav">Settings</button>
+		<br>
+		<button onclick="help();" class="side-nav-btn-btn"><img src="css/img/002-information.png" class="icon-nav">Help</button>
+		<br>
+		<img id="network_nav" src="css/img/003-Hotspot.png">
+		
+		
+	</div>
+	<!--Pages get shown inside this div tag-->
+	<div id="render">
+	</div>
+	<!---------------------------------------->
+	<input type="hidden"  id="username_backup" value="">
+	<br>
+
+
+	<!--Bottom Nav Bar------->
+	<div id="bottom-nav-bar">
+		
+			<div class="bottom-cards">
+				<button class="bottom-btn"><a href="https://webmail.123-reg.co.uk/login" target="_blank">123 REG</a></button>
+				<button class="bottom-btn"><a href="https://mail.google.com" target="_blank">Gmail</a></button>
+				<button class="bottom-btn"><a href="https://business.google.com" target="_blank">G-business</a></button>
+			</div>
+			<div class="bottom-cards">
+				<p>Business hours from 8:00 AM to 5:00 PM </p>
+			</div>
+			<div class="bottom-cards">
+				<a  class="icons" href="https://www.prospectpalms.org" target="_blank"><img src="css/img/heart.png" ></a>
+				<!--<a class="icons" href="https://web.whatsapp.com/" target="_blank"><img src="css/img/whatsapp.png"></a>-->
+			<a class="icons" href="https://www.facebook.com/ProspectPalms" target="_blank"><img src="css/img/facebook.png"></a>
+			<a class="icons" href="https://www.twitter.com/ProspectPalms" target="_blank"><img src="css/img/twitter.png"></a>
+			<a class="icons" href="https://www.instagram.com/prospectpalmsmaternity" target="_blank"><img src="css/img/instagram.png"></a>
+			<a class="icons" href="https://zw.linkedin.com/company/prospect-palms-private-maternity-hospital" target="_blank"><img src="css/img/linkedin.png"></a>
+			<a class="icons" href="https://www.youtube.com/channel/UCK7HIlCXkzS1nkto6Lc3vGg" target="_blank"><img src="css/img/youtube.png" lo></a>
+
+			</div>
+	</div>
+<div id="chat-icon">
+	<img id="chat" onclick="messages();" alt="" src="css/img/004-chat.png" >
+</div>
+	<div id="chat-box">
+		<div id="render_chat"></div>
+		<input type="text" id="chat-message">
+		<img alt="" id="chat-send" src="css/img/039-upload.png">
+	</div>
+	<!------------------------>
+<!---Javascript files------------------------------------------------------>
+<script type="text/javascript" src="script/index.js"></script>
+<script type="text/javascript" src="script/jquery.js"></script>
+<script type="text/javascript" src="script/render.js"></script>
+<script type="text/javascript">
+var page_id;
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const Username = urlParams.get('name');
+let user_Acc = document.getElementById('user_acc');
+$('#username_backup').val(Username);
+user_Acc.src="css/img/"+Username+".jpg";
+
+
+	var mess;
+
+$(document).ready(function(){
+		$('#chat-send').on('click', function(){
+		let user_message = $('#chat-message').val();
+		let user_backup = $('#username_backup').val();
+		$.ajax({
+			url:'http://192.168.1.23/Ark/Chats/send_message.php',
+			type:'POST',
+			data:{
+				'response1':1,
+				'user':user_backup,
+				'message':user_message,
+			},
+			success: function(response){
+				if(response == 'saved'){
+					$("#render_chat").load("http://192.168.1.23/Ark/Chats/messages.php");
+					$('#chat-message').val("");
+				}
+			}
+		});
+	});
+});
+
+
+//function renders dashboard page
+
+$(document).ready(function(){
+
+	$('#render').load('php/dashboard.php');
+});
+
+//function logout user and saves logout times
+
+$(document).ready(function(){
+		$('#logout_btn').on('click', function(){
+		let date_backup = new Date();
+		let user_backup = Username;
+		$.ajax({
+			url:'http://192.168.1.23/Ark/Insert/logout_times.php',
+			type:'POST',
+			data:{
+				'response1':1,
+				'date_backup':date_backup,
+				'user_backup':user_backup,
+			},
+			success: function(response){
+				if(response == 'Saved'){
+					logout();
+				}
+			}
+		});
+	});
+});
+
+// function fetches search data for search bar on the top search nav panel
+
+function fetch_nav() {
+        // GET SEARCH TERM
+				$(document).ready(function(){
+						var sl = document.getElementById('top-search-bar');
+						if($('#stop-search-bar') == ''){
+	             console.log('empty');
+						}else{
+					$('#top-search-bar').keyup(function(){
+						var close_btn = document.getElementById('close_nav_search');
+        var res_box = document.getElementById('nav_results');
+        res_box.style.display = 'block';
+        close_btn.style.display = 'block';
+        var data = new FormData();
+        data.append('search', document.getElementById("top-search-bar").value);
+        data.append('ajax', 1);
+
+        // AJAX SEARCH REQUEST
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', "http:192.168.1.23/Ark/Search/top_search_bar.php", true);
+        xhr.onload = function () {
+          if (this.status==200) {
+            var results = JSON.parse(this.response),
+                wrapper = document.getElementById("nav_results");
+            wrapper.innerHTML = "";
+            if (results.length > 0 && results.length<10) {
+              for(var res of results) {
+              	 var line = document.createElement("table");
+                line.innerHTML ="<tr class='appointment_id' data-id="+res['id']+"><td>"+res['First_Name'] + "</td><td>"+res['text_date']+"</td><td>"+res['start_time']+"</td></tr>";
+                 wrapper.appendChild(line);
+              }
+            } else {
+             wrapper.innerHTML = "<tr class='appointment_id'><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td><td>Client does not exist.</td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td></tr>";
+            }
+          } else {
+            alert("ERROR LOADING FILE!");
+          }
+        };
+        xhr.send(data);
+        return false;
+			});
+		}
+		});
+      }
+
+//function closes search data panel on click of close button
+     
+$(document).ready(function(){
+	$('#close_nav_search').on('click',function(){
+     var x = document.getElementById('close_nav_search');
+     var r = document.getElementById('nav_results');
+     x.style.display = 'none';
+     r.style.display = 'none';
+	});
+});
+
+//function closes search data panel when user clicks on panel items 
+
+ function close(){
+      	let y = $('#top-search-bar');
+        y.val("");
+      	var x = document.getElementById('close_nav_search');
+   		var r = document.getElementById('nav_results');
+    	x.style.display = 'none';
+    	r.style.display = 'none';
+ }
+// function calls for search function
+
+fetch_nav();
+
+//function redirects user to patient page after clicking the user in the search panel
+
+$(document).on('click', '.appointment_id', function(){
+	close();
+
+	page_id = $(this).data('id');
+	$('#render').load('php/all_one.php');
+});
+
+
+
+
+let compare_1;
+
+function alert_message(){
+	$.ajax({
+		url:"http:192.168.1.23/Ark/Chats/get_new_message.php",
+		type:"POST",
+		data:{
+			"NOTIFY":1,
+		},
+		success: function(response){
+			if(response){
+				$('#network_nav').attr("src","css/img/003-Hotspot.png");
+				let compare_2 = JSON.parse(response);
+				if (compare_1 != compare_2) {
+						compare_1 = compare_2;
+						get_name();
+				}
+			}
+		},
+		error: function(){
+			$('#network_nav').attr("src","css/img/048-internet.png");
+		}
+	});
+}
+
+setInterval(alert_message, 20000);
+
+
+
+</script>
+</body>
+<!--Zackertech Synaptics Munashe Komichi | Zayne Komichi Copyright @2021-->
+</html>

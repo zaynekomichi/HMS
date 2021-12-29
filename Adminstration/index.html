@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Security</title>
+	<link rel="stylesheet" type="text/css" href="css/body.css">
+	<link rel="stylesheet" type="text/css" href="css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/images.css">
+</head>
+<body>
+	<div id="side_nav">
+	<img  id="logo" src="media/logo.png">
+	<p id="comp_name">Prospect Palms</p>
+	<button type="button" class="btn-menu" onclick='Login_Attempts();'>Login Attempts</button>
+	<br>
+	<button type="button" class="btn-menu" onclick='user_login_out();'>User Access History</button>
+	<br>
+	<button type="button" class="btn-menu" onclick='backup_history();'>Backup History</button>
+	<br>
+	<button type="button" class="btn-menu" onclick='logout();' id="logout_btn">Logout</button>
+	</div>
+	<input type="hidden" id="username_backup" value="<?php echo $username_backup; ?>">
+	<div id="render">
+	
+	</div>
+
+	<script type="text/javascript" src="Script/jquery.js"></script>
+	<script type="text/javascript">
+		let url = "http://192.168.1.23/face/login_attempt/";
+		$('#render').load(`${url}php/login_attempts.php`);
+		function Login_Attempts(){
+        $('#render').load(`${url}php/login_attempts.php`);
+		}
+		function user_login_out(){
+		    $(document).ready(function(){
+		        $('#render').load(`${url}php/login_and_out_times.php`);
+		    });
+		}
+		function backup_history(){
+		    $(document).ready(function(){
+		        $('#render').load(`${url}php/backup_record.php`);
+		    });
+		}
+		function Show_logins(){
+			$(document).ready(function(){
+		        $('#spec_table').load(`${url}php/login.php`);
+		    });
+		}
+		function Show_logout(){
+			$(document).ready(function(){
+		        $('#spec_table').load(`${url}php/logout_record.php`);
+		    });
+		}
+		function logout(){
+		$(document).ready(function(){
+		    window.location.replace("../index.html");
+		});
+		}
+
+	</script>
+	
+</body>
+</html>

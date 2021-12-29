@@ -1,0 +1,149 @@
+
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">-->
+    <style type="text/css">
+        body{ font-family: 'Rubik' }
+        .wrapper{ width: 250px; height: 100%; padding: 20px;  border-radius: 25px;}
+
+       .wrapper label{
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+        .wrapper h2{
+            font-weight: normal;
+            color: white;
+        }
+
+        .form-group input{
+            text-align: center;
+            font-family: 'Rubik';
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #00aeff;
+            width:250px;
+            height:24px;
+        }
+        .form-group button{
+            width:100px;
+            background-color: white;
+            border:1px solid #00aeff;
+            font-family: 'Rubik';
+            border-radius: 10px;
+            height: 25px;
+        }
+
+        button:hover{
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
+
+        @keyframes rotating {
+          0% { transform: rotate(0deg) }
+          50% { transform: rotate(180deg) }
+          100% { transform: rotate(360deg) }
+        }
+        .rotating div {
+          position: absolute;
+          animation: rotating 1s linear infinite;
+          width: 160px;
+          height: 160px;
+          top: 20px;
+          left: 20px;
+          border-radius: 50%;
+          box-shadow: 0 4px 0 0 #00aeff;
+          transform-origin: 80px 82px;
+        }
+        .anim_box {
+          width: 200px;
+          height: 200px;
+          display: none;
+          overflow: hidden;
+          background: none;
+        }
+        .rotating {
+          width: 50%;
+          height: 50%;
+          position: relative;
+          transform: translateZ(0) scale(1);
+          backface-visibility: hidden;
+          transform-origin: 0 0; /* see note above */
+        }
+        .rotating div { box-sizing: content-box; }
+    </style>
+
+   
+    <div class="wrapper" >
+        <h2> Midwives Login</h2>
+        <p id="message">Please fill in your credentials to login.</p>
+        
+        <!--<form>-->
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="Username" name="username" class="form-control" >
+                <span class="help-block"></span>
+            </div>    
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="Password" name="password" class="form-control">
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <button id="login">Login</button>
+            </div>
+            <div class="anim_box">
+                <div class="rotating">
+                    <div></div>
+                </div>
+            </div>
+    </div>  
+    <script type="text/javascript">
+     $(function(){
+            $('#login').on('click', function(){
+                let animation  = $('.anim_box');
+                animation.css("display","inline-block");
+                let username = $('#Username').val();
+                let password = $('#Password').val();
+                if(username == "" && password == ""){
+                     $('#Username, #Password').css({
+                        "borderColor":"red",
+                     });
+                     animation.css("display","none");
+                }else{
+                    $.ajax({
+                        url:"http://192.168.1.23/Ark/Login/midwives_login.php",
+                        type:"POST",
+                        data:{
+                            "reception_login":1,
+                            "username":username,
+                            "password":password
+                        },
+                        success: function(response){
+                            if(response == "verified"){
+                                location.replace("Midwives/index.html?name="+$('#Username').val());
+                            }else if(response == "not verified"){
+                               $('#message').text("Details are incorrect");
+                                $('#Username, #Password').css({
+                                    "borderColor":"red",
+                                });
+                                animation.css("display","none");
+                            }else if(response == "trespassing"){
+                                $('#message').text("Please enter into your designated account only");
+                                 let change_color = document.getElementById('message');
+                                 change_color.style.color = "purple";
+                                 animation.css("display","none");
+                            }else{
+                                $('#message').val("Please check if your network is available.");
+                                animation.css("display","none");
+                            }
+                        },
+                        error: function(error){
+                             $('#message').text("No network");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+

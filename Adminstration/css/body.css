@@ -1,0 +1,40 @@
+body{
+    margin:0px;
+}
+/* Index.php Main Items*/
+#side_nav{
+    position: fixed;
+    width: 200px;
+    height: 5000px;
+    text-align: center;
+    background-color: #00aeff;
+}
+
+
+#render{
+    margin-left: 200px;
+}
+
+#attempts_table{
+    width: 900px;
+    text-align: center;
+    box-shadow: 1px 1px 20px 0px grey;
+}
+
+
+
+#attempts_table th{
+	background-color: #00aeff;
+	padding: 10px;
+	color: white;
+}
+
+#attempts_table td{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#attempts_table tr:hover{
+	background-color: lightblue;
+	cursor: pointer;
+}

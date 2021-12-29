@@ -1,0 +1,168 @@
+#first_session_div{
+	margin-left: 50px;
+}
+
+#language_container{
+	box-shadow: 0px 1px 5px 0px grey;
+	border-radius: 7px;
+	height: 200px;
+	align-items: center;
+	justify: center;
+}
+
+#Interpreter_Container{
+	box-shadow: 0px 1px 5px 0px grey;
+	border-radius: 7px;
+	height: 230px;
+	align-items: center;
+	justify: center;
+}
+
+#Speech_Container{
+	box-shadow: 0px 1px 5px 0px grey;
+	border-radius: 7px;
+	height: 150px;
+	align-items: center;
+	justify: center;
+}
+
+#Hearing_Container{
+	box-shadow: 0px 1px 5px 0px grey;
+	border-radius: 7px;
+	height: 150px;
+	align-items: center;
+	justify: center;
+}
+
+#Cervical_Container{
+	box-shadow: 0px 1px 5px 0px grey;
+	border-radius: 7px;
+	height: 270px;
+	align-items: center;
+}
+
+
+
+#Cervical_Flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+#Hearing_Flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+
+#Language-Flex{
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	
+}
+
+#Speech_Flex{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.center_span{
+	font-size: 21px;
+	color: #00aeff;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.input_booking{
+	height: 25px;
+	border-radius: 7px;
+	width:  350px;
+	border: 1px solid #00aeff;
+	text-align: center;
+}
+
+.textarea_booking{
+	width: 350px;
+	height: 100px;
+	border-radius: 7px;
+	border: 1px solid #00aeff;
+}
+
+.select_booking{
+	height: 25px;
+	border-radius: 7px;
+	width:  250px;
+	border: 1px solid #00aeff;
+	text-align: center;
+}
+
+.select_booking option{
+	border-color: #00aeff;
+}
+
+.tick{
+	width: 20px;
+	height: 20px;
+}
+
+#approval_tick, #inter_tick, #ssd_tick, #hear_tick, #cerv_tick, #alert_box{
+	display: none;
+}
+
+#save_info{
+	width: 100px;
+	height: 25px;
+	border-radius: 25px;
+	border: 1px solid #00aeff;
+	background-color: white;
+}
+
+#save_info:hover{
+	transition: 0.5s;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-color: #00aeff;
+	color: white;
+}
+
+
+
+
+
+
+/* second session styling*/
+
+#second_session_div{
+	margin-left: 30px;
+	text-align: center;
+}
+
+
+#HistoryGrid{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: 150px 150px 150px;
+	grid-gap: 10px;
+	box-shadow: 0px 1px 5px 0px grey;
+	border-radius: 7px;
+	padding: 10px;
+}
+
+.second_textarea{
+	resize: none;
+	width: 250px;
+	height: 100px;
+	border-radius: 7px;
+	border: 1px solid #00aeff;
+}
+.second_booking{
+	margin-bottom: 7px;
+	height: 25px;
+	border-radius: 7px;
+	width:  250px;
+	border: 1px solid #00aeff;
+	text-align: center;
+}

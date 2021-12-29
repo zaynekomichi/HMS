@@ -1,0 +1,716 @@
+<div id="container">
+    <div align="center">
+        <h1>Postnatal Care</h1>
+    </div>
+    <div id="checkup_table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time After Delivery</th>
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td><input type="date"  id="date_a"></td>
+                    <td><input type="date"  id="date_b"></td>
+                    <td><input type="date"  id="date_c"></td>
+                    <td><input type="date"  id="date_d"></td>
+                </tr>
+                <tr class="color_tr">
+                    <td>
+                        Mother
+                    </td>
+                </tr>
+                <tr>
+                    <td>Temperature</td>
+                    <td><input type="text"  id="temp_a"></td>
+                    <td><input type="text"  id="temp_b"></td>
+                    <td><input type="text"  id="temp_c"></td>
+                    <td><input type="text"  id="temp_d"></td>
+                </tr>
+                <tr>
+                    <td>BP</td>
+                    <td><input type="text"  id="bp_a"></td>
+                    <td><input type="text"  id="bp_b"></td>
+                    <td><input type="text"  id="bp_c"></td>
+                    <td><input type="text"  id="bp_d"></td>
+                </tr>
+                <tr>
+                    <td>Hb</td>
+                    <td><input type="text"  id="hb_a"></td>
+                    <td><input type="text"  id="hb_b"></td>
+                    <td><input type="text"  id="hb_c"></td>
+                    <td><input type="text"  id="hb_d"></td>
+                </tr>
+                <tr>
+                    <td>
+                        Breasts
+                    </td>
+                </tr>
+                <tr>
+                    <td>Is the child breast feeding</td>
+                    <td><select id="breast_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="breast_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="breast_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="breast_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Any problem with milk</td>
+                    <td><select id="milk_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="milk_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="milk_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="milk_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Crackled nipples</td>
+                    <td><select id="cn_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="cn_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="cn_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="cn_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Breasts Engorged</td>
+                    <td><select id="bn_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="bn_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="bn_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="bn_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Breasts abcess</td>
+                    <td><select id="abc_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="abc_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="abc_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="abc_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>EBF</td>
+                    <td><input type="text"  id="ebf_a" placeholder="Give Advice Accordingly"></td>
+                    <td><input type="text"  id="ebf_b" placeholder="Give Advice Accordingly"></td>
+                    <td><input type="text"  id="ebf_c" placeholder="Give Advice Accordingly"></td>
+                    <td><input type="text"  id="ebf_d" placeholder="Give Advice Accordingly"></td>
+                </tr>
+                <tr class="color_tr"> 
+                    <td>
+                        Uterus
+                    </td>
+                </tr>
+                <tr>
+                    <td>Involution</td>
+                    <td><select id="invo_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="invo_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="invo_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="invo_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Tenderness</td>
+                    <td><select id="tend_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="tend_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="tend_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="tend_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr class="color_tr">
+                    <td>
+                        Genital Tract
+                    </td>
+                </tr>
+                <tr>
+                    <td>Perineum</td>
+                    <td><select id="peri_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="peri_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="peri_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="peri_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Epi or Tear Healing</td>
+                    <td><select id="epi_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="epi_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="epi_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="epi_d"> 
+                        <option disabledd selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Pus</td>
+                    <td><select id="pus_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="pus_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="pus_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="pus_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Wound Gaping</td>
+                    <td><select id="gap_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="gap_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="gap_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="gap_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>lochia</td>
+                    <td><select id="loch_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Normal</option>
+                        <option>Foul Smelling</option>
+                        <option>Heavy</option>
+                    </select></td>
+                    <td><select id="loch_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Normal</option>
+                        <option>Foul Smelling</option>
+                        <option>Heavy</option>
+                    </select></td>
+                    <td><select id="loch_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Normal</option>
+                        <option>Foul Smelling</option>
+                        <option>Heavy</option>
+                    </select></td>
+                    <td><select id="loch_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Normal</option>
+                        <option>Foul Smelling</option>
+                        <option>Heavy</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Bleeding</td>
+                    <td><select id="bleed_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="bleed_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="bleed_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="bleed_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr class="color_tr">
+                    <td>
+                        Legs
+                    </td>
+                </tr>
+                <tr>
+                    <td>Calf Pain</td>
+                    <td><select id="calf_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="calf_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="calf_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="calf_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Vericose Veins</td>
+                    <td><select id="vv_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="vv_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="vv_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                    <td><select id="vv_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr class="color_tr">
+                    <td>
+                        Mental State
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mental State</td>
+                    <td><select id="mental_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                    <td><select id="mental_b"> 
+                        <option disabled selected>CHOOSE</option>
+                         <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                    <td><select id="mental_c"> 
+                        <option disabled selected>CHOOSE</option>
+                         <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                    <td><select id="mental_d"> 
+                        <option disabled selected>CHOOSE</option>
+                         <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                </tr>
+                <tr class="color_tr">
+                    <td>
+                        Health Education/ Counselling
+                    </td>
+                </tr>
+                <tr>
+                    <td>Danger signs of peurperium and newborn</td>
+                    <td><input type="text"  id="dpn_a"></td>
+                    <td><input type="text"  id="dpn_b"></td>
+                    <td><input type="text"  id="dpn_c"></td>
+                    <td><input type="text"  id="dpn_d"></td>
+                </tr>
+                <tr>
+                    <td>Family Planning Counselling</td>
+                    <td><input type="text"  id="fpc_a"></td>
+                    <td><input type="text"  id="fpc_b"></td>
+                    <td><input type="text"  id="fpc_c"></td>
+                    <td><input type="text"  id="fpc_d"></td>
+                </tr>
+                <tr>
+                    <td>Contraceptives given</td>
+                     <td><select id="contra_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                     <td><select id="contra_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                     <td><select id="contra_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                     <td><select id="contra_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Counselling on infant feeding</td>
+                    <td><input type="text"  id="cif_a"></td>
+                    <td><input type="text"  id="cif_b"></td>
+                    <td><input type="text"  id="cif_c"></td>
+                    <td><input type="text"  id="cif_d"></td>
+                </tr>
+                <tr>
+                    <td>Treatment</td>
+                </tr>
+                <tr>
+                    <td>Vitamin A given to mother</td>
+                    <td><input type="text"  id="vam_a"></td>
+                    <td><input type="text"  id="vam_b"></td>
+                    <td><input type="text"  id="vam_c"></td>
+                    <td><input type="text"  id="vam_d"></td>
+                </tr>
+                <tr>
+                    <td>Ferrous/Folic Acid</td>
+                    <td><input type="text"  id="ffa_a"></td>
+                    <td><input type="text"  id="ffa_b"></td>
+                    <td><input type="text"  id="ffa_c"></td>
+                    <td><input type="text"  id="ffa_d"></td>
+                </tr>
+                <tr>
+                    <td>Other Treatment</td>
+                    <td><input type="text"  id="ot_a"></td>
+                    <td><input type="text"  id="ot_b"></td>
+                    <td><input type="text"  id="ot_c"></td>
+                    <td><input type="text"  id="ot_d"></td>
+                </tr>
+                <tr>
+                    <td>New Born Infant</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td><input type="text"  id="weight_a"></td>
+                    <td><input type="text"  id="weight_b"></td>
+                    <td><input type="text"  id="weight_c"></td>
+                    <td><input type="text"  id="weight_d"></td>
+                </tr>
+                <tr>
+                    <td>Fever(temperature>38)</td>
+                    <td><input type="text"  id="fever_a"></td>
+                    <td><input type="text"  id="fever_b"></td>
+                    <td><input type="text"  id="fever_c"></td>
+                    <td><input type="text"  id="fever_d"></td>
+                </tr>
+                <tr>
+                    <td>Baby Sucking well</td>
+                    <td><input type="text"  id="suck_a"></td>
+                    <td><input type="text"  id="suck_b"></td>
+                    <td><input type="text"  id="suck_c"></td>
+                    <td><input type="text"  id="suck_d"></td>
+                </tr>
+                <!--use select-->
+                <tr>
+                    <td>Breathing</td>
+                    <td><select id="breath_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                     <td><select id="breath_b"> 
+                        <option disabled selected>CHOOSE</option>
+                         <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                     <td><select id="breath_c"> 
+                        <option disabled selected>CHOOSE</option>
+                         <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                     <td><select id="breath_d"> 
+                        <option disabled selected>CHOOSE</option>
+                         <option>Normal</option>
+                        <option>Abnormal</option>
+                       
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Umbilical cord</td>
+                    <td><select id="cord_a"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Dry</option>
+                        <option>Clean</option>
+                        <option>Infected</option>
+                    </select></td>
+                     <td><select id="cord_b"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Dry</option>
+                        <option>Clean</option>
+                        <option>Infected</option>
+                    </select></td>
+                     <td><select id="cord_c"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Dry</option>
+                        <option>Clean</option>
+                        <option>Infected</option>
+                    </select></td>
+                     <td><select id="cord_d"> 
+                        <option disabled selected>CHOOSE</option>
+                        <option>Dry</option>
+                        <option>Clean</option>
+                        <option>Infected</option>
+                    </select></td>
+                </tr>
+                <!--Use input-->
+                <tr>
+                    <td>Passing Stool Normally</td>
+                    <td><input type="text"  id="psn_a"></td>
+                    <td><input type="text"  id="psn_b"></td>
+                    <td><input type="text"  id="psn_c"></td>
+                    <td><input type="text"  id="psn_d"></td>
+                </tr>
+                <tr>
+                    <td>Passing Urine Normally</td>
+                    <td><input type="text"  id="pun_a"></td>
+                    <td><input type="text"  id="pun_b"></td>
+                    <td><input type="text"  id="pun_c"></td>
+                    <td><input type="text"  id="pun_d"></td>
+                </tr>
+                <tr>
+                    <td>New Born Infant</td>
+                </tr>
+                <tr>
+                    <td>Vaccinations(specify:eg BCG)</td>
+                    <td><input type="text"  id="bcg_a"></td>
+                    <td><input type="text"  id="bcg_b"></td>
+                    <td><input type="text"  id="bcg_c"></td>
+                    <td><input type="text"  id="bcg_d"></td>
+                </tr>
+                <tr>
+                    <td>Cotrimoxazole Prophylaxis</td>
+                    <td><input type="text"  id="cp_a"></td>
+                    <td><input type="text"  id="cp_b"></td>
+                    <td><input type="text"  id="cp_c"></td>
+                    <td><input type="text"  id="cp_d"></td>
+                </tr>
+                <tr>
+                    <td>NVP/ART(specify))</td>
+                    <td><input type="text"  id="nvp_a"></td>
+                    <td><input type="text"  id="nvp_b"></td>
+                    <td><input type="text"  id="nvp_c"></td>
+                    <td><input type="text"  id="nvp_d"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div align="center" style="margin-top:10px;">
+        <button id="save_four" class="btn">Save</button>
+    </div>
+</div>
+<script type="text/javascript" src="script/postCheckup.js"></script>

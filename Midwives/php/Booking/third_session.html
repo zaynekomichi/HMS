@@ -1,0 +1,134 @@
+<div id="container">
+	<div id="third_session">
+		<h1>Genetic History</h1>
+		<p id="p_name"></p>
+		<div id="gen_history">
+			<div class="gen_cards">
+				<span>Is there anyone in the family with learning difficulties</span>
+				<select class="third_select" id="learn_dis">
+					<option selected disabled>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="gen_cards">
+				<span>Is there a family of muscular dystrophy</span>
+				<select class="third_select" id="mus_distrophy">
+					<option selected disabled>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="gen_cards">
+				<span>Is there a family History of cystic fibrosis</span>
+				<select class="third_select" id="fibroids">
+					<option selected disabled>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="gen_cards">
+				<span>Medical condition which may affect baby from both the parents families</span>
+				<select class="third_select" id="inherit">
+					<option selected disabled>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="gen_cards">
+				<span>Are you related to your partner:</span>
+				<select class="third_select" id="related">
+					<option selected disabled>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="gen_cards">
+				<span>family History of infant death,still birth or neonatal death or recurrent miscarriages(3 or more)</span>
+				<select class="third_select" id="miscarriage">
+					<option selected disabled>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div id="tick_div" align="center">
+				<img class="tick" id="approval_tick" src="css/img/approve.png" alt="">
+			</div>
+		</div>
+		<div id="button_div" align="center">
+			<button id="save_info">Save</button>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$.ajax({
+			url:"http:192.168.1.23/Ark/Insert/midwives_booking.php",
+			type:"POST",
+			data:{
+				"get_username":1,
+				"user_id":page_id
+			},
+			success: function(response){
+				$('#p_name').text(response);
+			}
+		});
+	
+		$('#miscarriage').mouseout(function(){
+			let gen_1 = $('#learn_dis').val();
+			let gen_2 = $('#mus_distrophy').val();
+			let gen_3 = $('#fibroids').val();
+			let gen_4 = $('#inherit').val();
+			let gen_5 = $('#related').val();
+			let gen_6 = $('#miscarriage').val();
+			if( gen_1 != null && gen_2 != null && gen_3  != null && gen_4  != null && gen_5  != null && gen_6  != null){
+				$('#approval_tick').css("display","block");
+				$('#save_info').css("display","block");
+			}
+		});
+
+		$('#save_info').on('click', function(){
+			let gen_1 = $('#learn_dis').val();
+			let gen_2 = $('#mus_distrophy').val();
+			let gen_3 = $('#fibroids').val();
+			let gen_4 = $('#inherit').val();
+			let gen_5 = $('#related').val();
+			let gen_6 = $('#miscarriage').val();
+			$.ajax({
+				url:"http://192.168.1.23/Ark/Insert/midwives_booking.php",
+				type:"POST",
+				data:{
+					"third_session":1,
+					"id":page_id,
+					"gen_1":gen_1,
+					"gen_2":gen_2,
+					"gen_3":gen_3,
+					"gen_4":gen_4,
+					"gen_5":gen_5,
+					"gen_6":gen_6
+				},
+				success: function(response){
+					if(response==1){
+						show_success();
+					}else{
+						console.log("horrible"+response);
+					}
+				}
+			});
+		});
+
+			$.ajax({
+			url:"http://192.168.1.23/Ark/Insert/midwives_booking.php",
+			type:"POST",
+			data:{
+				"get_username":1,
+				"user_id":page_id
+			},
+			success: function(response){
+				$('#p_name').text(response);
+			}
+		});
+
+	});
+
+</script>

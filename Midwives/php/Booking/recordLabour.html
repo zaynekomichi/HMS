@@ -1,0 +1,322 @@
+<div id="container">
+	<div align="center" id="rd">
+		<h1>Record Of Labour</h1>
+		<p id="p_name"></p>
+
+		<!--EXAMINER DETAILS-->
+		<!--#################################################################-->
+		<div id="examiner_details" class="grid_children">
+			<div>
+			<span>Date</span>
+			<input type="date" class="rd_input" id="exDate">
+			</div>
+			<div>
+			<span>Time</span>
+			<input type="time" class="rd_input" id="exTime">
+			</div>
+			<div>
+			<span>Examined By</span>
+			<input type="text" readonly  class="rd_input" id="three">
+			</div>
+		</div>
+		<!--##################################################################-->
+
+		<!--HISTORY DETAILS-->
+		<!--##################################################################-->
+		<div class="color_headings"><h3 class="midify">History</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Reason for Admission</span>
+					<br>
+					<textarea class="big_text" id="hreason"></textarea>
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Contractions</span>
+					<br>
+					<select  class="rd_input" id="hContractions">
+						<option disabled selected>CHOOSE</option>
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+				</div>
+				<div>
+					<span>Time of onset</span>
+					<br>
+					<input type="time" class="rd_input" id="hOnset">
+				</div>
+				<div>
+					<span>Duration</span>
+					<br>
+					<input type="text" class="rd_input" id="hDuration">
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Membranes Raptured</span>
+						<br>
+					<select  class="rd_input" id="hraptured">
+						<option disabled selected>CHOOSE</option>
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+				</div>
+				<div>
+					<span>Time of Rapture</span>
+					<br>
+					<input type="time" name="" class="rd_input" id="htimeRapture">
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Show</span>
+						<br>
+					<select  class="rd_input" id="hshow">
+						<option disabled selected>CHOOSE</option>
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+				</div>
+				<div>
+					<span>LNMP</span>
+					<br>
+					<input type="text" class="rd_input"  id="hLNMP">
+				</div>
+				<div>
+					<span>EDD</span>
+					<br>
+					<input type="text" class="rd_input" id="hEDD">
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Obstetric History</span>
+					<br>
+					<textarea class="second_textarea" id="hhistory"></textarea>
+				</div>
+				<div>
+					<span>Other relevant obstetric information</span>
+					<br>
+					<textarea class="second_textarea" id="hinformation"></textarea>
+				</div>
+				<div>
+					<span>Other medical conditions</span>
+					<br>
+					<textarea class="second_textarea" id="hcondition"></textarea>
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>HIV testing in labour</span>
+					<br>
+					<textarea class="second_textarea" id="htesting"></textarea>
+				</div>
+			</div>
+		</div>
+		<!--#######################################################################-->
+		<div class="color_headings"><h3 class="midify">Examination</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>General Condition</span>
+					<br>
+					<textarea class="big_text" id="exCondition">
+					</textarea>
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Temp</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="exTemp">
+				</div>
+					<div>
+					<span>BP</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="exBP">
+				</div>
+					<div>
+					<span>HB</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="exHB">
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Odema</span>
+						<br>
+					<select  class="rd_input" id="exOdema">
+						<option disabled selected>CHOOSE</option>
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<!--############################################################################################-->
+
+		<!--PUPATION-->
+		<!--############################################################################################-->
+		<div class="color_headings"><h3 class="midify">On Abdominal Pulpation</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Gestation:Weeks</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="apweeks">
+				</div>
+				<div>
+					<span>LIE</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="apLIE">
+				</div>
+				<div>
+					<span>Presentation</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="apPresentation">
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Engagement</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="apEngagement">
+				</div>
+				<div>
+					<span>Fetal Heart Rate</span>
+						<br>
+					<select  class="rd_input" id="apFetalHeart">
+						<option disabled selected>CHOOSE</option>
+						<option>Yes</option>
+						<option>No</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="color_headings"><h3 class="midify">Contractions</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Strength</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="cstrength">
+				</div>
+				<div>
+					<span>Frequency</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="cfrequency">
+				</div>
+				<div>
+					<span>Duration</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="cduration">
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Urinalysis</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="curinal">
+				</div>
+			</div>
+		</div>
+		<div class="color_headings"><h3 class="midify">Vaginal Examinations</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Vulva and Vagina</span>
+					<br>
+					<textarea class="big_text" id="vereason">
+					</textarea></div>
+			</div>
+		</div>
+		<div class="color_headings"><h3 class="midify">Cervix</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Effacement(%)</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="cefface">
+				</div>
+				<div>
+					<span>Dilatation(cm)</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="cdilation">
+				</div>
+				<div>
+					<span>Application to Presenting Part</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="cpresenting">
+				</div>
+			</div>
+		</div>
+		<div class="color_headings"><h3 class="midify">Membrane</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Membranes</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="mmebrane">
+				</div>
+				<div>
+					<span>Liqour</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="mliqour">
+				</div>
+				<div>
+					<span>Cord Felt</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="mcord">
+				</div>
+			</div>
+		</div>
+		<div class="color_headings"><h3 class="midify">Presenting Part</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Level of Presenting Part</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="pLpp">
+				</div>
+				<div>
+					<span>Degree of Moulding/Caput</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="pdm">
+				</div>
+				<div>
+					<span>Position</span>
+					<br>
+					<input type="text" name="" class="rd_input" id="pposition">
+				</div>
+			</div>
+		</div>
+		<div class="color_headings"><h3 class="midify">Pelvic</h3></div>
+		<div class="rhistory">
+			<div class="r_cards">
+				<div>
+					<span>Pelvic Assesment</span>
+						<br>
+					<select  class="rd_input" id="passes">
+						<option disabled selected>CHOOSE</option>
+						<option>Adequate</option>
+						<option>Borderline</option>
+						<option>Inadequate</option>
+					</select>
+				</div>
+			</div>
+			<div class="r_cards">
+				<div>
+					<span>Diagnosis and Midwife's Orders</span>
+					<br>
+					<textarea class="big_text" id="pmidorders">
+					</textarea></div>
+			</div>
+		</div>
+		<div>
+			<button id="save_two" class="btn">Save</button>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="script/record.js"></script>

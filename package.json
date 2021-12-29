@@ -1,0 +1,19 @@
+{
+  "name": "HMSbeta2",
+  "ProductName":"Prospect Palms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . HMSbeta  --icon=build/icon.ico --overwrite --asar --platform=win32 --arch=ia32  --prune=true --out=buildsep --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Prospect Palms\""
+  },
+  "keywords": [],
+  "author": "Zayne Komichi",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7",
+    "electron-packager": "^15.3.0"
+  }
+}

@@ -1,0 +1,1 @@
+<?php $Database='localhost';$DatabaseName='login_attempt';$DatabasePassword='';$DatabaseUsername='root';$db_connect=mysqli_connect($Database,$DatabaseUsername,$DatabasePassword,$DatabaseName);?>

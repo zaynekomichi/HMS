@@ -1,0 +1,402 @@
+ <div id="first_session_div">
+
+	<!--language details are here -->
+	<!--######################### -->
+	<h1 id="user_being_booked">Booking for</h1>
+	<p id="p_name"></p>
+	<div id="language_container">
+		<h1 class="center_span">Language</h1>
+		<div id="Language-Flex">
+			<div class="language_cards">
+				<span>Speak English</span>
+				<select id="lang_one" class="select_booking"> 
+					<option disabled selected>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+					<option>A Little Bit</option>
+				</select>
+			</div>
+			<div class="language_cards">
+				<span>Understand English</span>
+				<select id="lang_two" class="select_booking">
+					<option disabled selected>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+					<option>A Little Bit</option>
+				</select>
+			</div>
+			<div class="language_cards">
+				<span>Other Languages</span>
+				<select id="lang_three" class="select_booking">
+					<option disabled selected>CHOOSE</option>
+					<option>Ndebele</option>
+					<option>Shona</option>
+					<option>Kalanga</option>
+					<option>Sotho</option>
+					<option>Other</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div id="tick_div" align="center">
+			<img class="tick" id="approval_tick" src="css/img/approve.png" alt="">
+		</div>
+	</div>
+
+	<!--#########################-->
+	<!--language details end here-->
+
+	<br>
+
+	<!--Interpreter details are here -->
+	<!--############################ -->
+	<div id="Interpreter_Container" >
+		<h1 class="center_span">Interpreter-optional</h1>
+		<div id="Interpreter-Flex">
+			<div class="inter_cards">
+				<input type="text" placeholder="Full Name" id="InterName" class="input_booking">
+				<input type="text" placeholder="Address" id="InterAddress" class="input_booking">
+			</div>
+			<br>
+			<div class="inter_cards">
+				<input type="text" placeholder="Tel No" id="InterNo" class="input_booking">
+				<input type="text" placeholder="Interpreting Service No" id="InterService" class="input_booking">
+			</div>
+			<br>
+			<div class="inter_cards">
+				<span>Special Needs</span>
+				<br>
+				<select id="inter_one" class="select_booking">
+					<option disabled selected>CHOOSE</option>
+					<option>Physical</option>
+					<option>Psychological</option>
+					<option>Social</option>
+					<option>None</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="tick_div" align="center">
+			<img class="tick" id="inter_tick" src="css/img/approve.png" alt="">
+		</div>
+		<br>
+	</div>
+
+	<!--############################-->
+	<!--Interpreter details end here-->
+
+	<br>
+
+	<!-- SPEECH, SIGHT, DIET BEGINS HERE -->
+	<!--####################-->
+	<div id="Speech_Container">
+		<h1 class="center_span">Speech Sight & Diet</h1>
+		<div id="Speech_Flex">
+			<div class="speach_card ">
+				<span>Speech</span>
+				<br>
+				<select id="speech_one" class="select_booking">
+					<option disabled selected>CHOOSE</option>
+					<option>Normal</option>
+					<option>Problem Speech</option>
+					<option>No Speach</option>
+				</select>
+			</div>
+			<div class="speech_card">
+				<span>Sight</span>
+				<br>
+				<select id="sight_one" class="select_booking">
+				<option disabled selected>CHOOSE</option>
+				<option>Normal</option>
+				<option>Partially Sighted</option>
+				<option>Blind</option>
+			</select>
+			</div>
+			<div class="speach_card">
+				<span>Diet</span>
+				<br>
+				<select id="diet_one" class="select_booking">
+					<option disabled selected> CHOOSE</option>
+					<option>Normal</option>
+					<option>Pescatarian</option>
+					<option>Vegitarian</option>
+					<option>Vegan</option>
+					<option>Diabetic</option>
+					<option>Halaal</option>
+					<option>No Pork</option>
+					<option>Kosher</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="tick_div" align="center">
+			<img class="tick" id="ssd_tick" src="css/img/approve.png" alt="">
+		</div>
+	</div>
+
+	<!--################-->
+	<!--SPEECH ENDS HERE-->
+
+	<br>
+
+	<!--HEARING BEGINS HERE -->
+	<!--################### -->
+	<div id="Hearing_Container">
+		<h1 class="center_span">Auditory</h1>
+		<div id="Hearing_Flex">
+			<div class="hearing_card">
+				<span>Normal Lip Read</span>
+				<br>
+				<select id="deaf_one" class="select_booking">
+					<option disabled selected>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="hearing_card">
+				<span>Impaired Sign</span>
+				<br>
+				<select id="deaf_two" class="select_booking">
+					<option disabled selected>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+			<div class="hearing_card">
+				<span>Deaf</span>
+				<br>
+				<select id="deaf_three" class="select_booking">
+					<option disabled selected>CHOOSE</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="tick_div" align="center">
+			<img class="tick" id="hear_tick" src="css/img/approve.png" alt="">
+		</div>
+	</div>
+
+	<!--##################-->
+	<!--HEARINGS ENDS HERE-->
+
+	<br>
+
+	<!--Cervical screening starts here -->
+	<!--###############################-->
+	<div id="Cervical_Container">
+		<h1 class="center_span">Cervix Screening</h1>
+		<div id="Cervical_Flex">
+			<div class="cs_card">
+				<span>Last Cervical Smear</span>
+				<br>
+				<input type="date" id="cs_date" class="input_booking">
+				<br>
+				<span>Results</span>
+				<br>
+				<textarea id="cs_results" class="textarea_booking"></textarea>
+			</div>
+			<div class="cs_card">
+				<span>VIAC</span>
+				<br>
+				<input type="date" id="cs_date_two" class="input_booking">
+				<br>
+				<span>Results</span>
+				<br>
+				<textarea id="cs_results_two" class="textarea_booking"></textarea>
+			</div>
+		</div>
+		<br>
+		<div class="tick_div" align="center">
+			<img class="tick" id="cerv_tick" src="css/img/approve.png" alt="">
+		</div>
+	</div>
+
+	<!--############################-->
+	<!--CERVICAL SCREENING ENDS HERE-->
+	<br>
+
+	<div id="button_div" align="center">
+		<button id="save_info">Save</button>
+	</div>
+</div>
+<script type="text/javascript">
+
+	$(function(){
+
+		$('#save_info').on('click', function(){
+
+			//get lang values
+			let lang_one = $('#lang_one').val();
+			let lang_two = $('#lang_two').val();
+			let lang_three = $('#lang_three').val();
+			//lang ends here
+
+			//get Interpreter values
+			let InterName = $('#InterName').val();
+			let InterAddress = $('#InterAddress').val();
+			let InterService = $('#InterService').val();
+			let InterNo = $('#InterNo').val();
+			let inter_one = $('#inter_one').val();
+			//interpreter ends here
+
+			//get speech values
+
+			let speech_one = $('#speech_one').val();
+
+			//speech ends here
+
+			//get hearing values values
+			let deaf_one = $('#deaf_one').val();
+			let deaf_two = $('#deaf_two').val();
+			let deaf_three = $('#deaf_three').val();
+			//hearing ends here
+
+			//get sight values
+
+			let sight_one = $('#sight_one').val();
+
+			//sight ends here
+
+			//get diet values
+
+			let diet_one = $('#diet_one').val();
+
+			//diet ends here
+
+			//get cervical screening values
+
+			let cs_date = $('#cs_date').val();
+			let cs_results = $('#cs_results').val();
+			let cs_date_two = $('#cs_date_two').val();
+			let cs_results_two = $('#cs_results_two').val();
+
+			//cervical screening ends here
+
+			//send values to database for storage
+			$.ajax({
+				url:"http://192.168.1.23/Ark/Insert/midwives_booking.php",
+				type:"POST",
+				data:{
+					"first_session": 1,
+					"id":page_id,
+					"lang_one":lang_one,
+					"lang_two":lang_two,
+					"lang_three":lang_three,
+					"InterName":InterName,
+					"InterAddress":InterAddress,
+					"InterService":InterService,
+					"InterNo":InterNo,
+					"inter_one":inter_one,
+					"speech_one":speech_one,
+					"deaf_one":deaf_one,
+					"deaf_two":deaf_two,
+					"deaf_three":deaf_three,
+					"sight_one":sight_one,
+					"diet_one":diet_one,
+					"cs_date":cs_date,
+					"cs_date_two":cs_date_two,
+					"cs_results":cs_results,
+					"cs_results_two":cs_results_two
+				},
+				success: function(response){
+					if(response == 1){
+						$('#render').load('php/Booking/second_session.html');
+					}else{
+						console.log("horrible ++"+ response);
+					}
+				}
+
+			});
+		});
+	});
+
+	$('#lang_three').mouseout( function(){
+		 let img_container = document.getElementById('lang_tick');
+	     let approval = document.getElementById('approval_tick');
+		 let lo = $('#lang_one').val();
+	     let lt = $('#lang_two').val();
+	     let lr = $('#lang_three').val();
+    if(lo != null && lt != null && lr != null){
+    	 var lang = true;
+    	 approval.style.display = "block"
+    }else{
+      	approval.style.display = "none";
+      	console.log(false);
+    }
+
+	});
+
+	$('#inter_one').mouseout(function(){
+		console.log("clicked");
+		let approve_inter = document.getElementById('inter_tick');
+		let InterName = $('#InterName').val();
+		let InterAddress = $('#InterAddress').val();
+		let InterNo = $('#InterNo').val();
+		let InterService = $('#InterService').val();
+		let inter_one = $('#inter_one').val();
+		console.log(InterName+" "+
+			" "+InterAddress+" "+InterService+" "+inter_one);
+		if(InterName !== "" && InterAddress !== "" && InterNo !== "" && InterService !== "" && inter_one != null){
+			var inter = true;
+			approve_inter.style.display = "block";
+		}else{
+			approve_inter.style.display ="none";
+		}
+	});
+
+	$('#diet_one').mouseout(function(){
+		let ssd_tick = document.getElementById('ssd_tick');
+		let speech = $('#speech_one').val();
+		let sight = $('#sight_one').val();
+		let diet = $('#diet_one').val();
+		console.log(speech+" "+sight+" "+diet);
+		if(speech != null && sight != null && diet != null){
+			ssd_tick.style.display = "block";
+		}else{
+			ssd_tick.style.display ="none";
+		}
+	});
+
+	$('#deaf_three').mouseout(function(){
+		let hear_tick = document.getElementById('hear_tick');
+		let d = $('#deaf_one').val();
+		let dt = $('#deaf_two').val();
+		let dr = $('#deaf_three').val();
+		if(d != null && dt != null && dr != null){
+			hear_tick.style.display = "block";
+		}else{
+			hear_tick.style.display = "none";
+		}
+	});
+
+	$('#cs_results_two').mouseout(function(){
+		let cerv_tick = document.getElementById('cerv_tick');
+		let csd = $('#cs_date').val();
+		let csr = $('#cs_results').val();
+		let csdt = $('#cs_date_two').val();
+		let csrt = $('#cs_results_two').val();
+		console.log(csrt);
+		if(csd !== "" && csr !== ""  && csdt !== "" && csrt !== "" ){
+			$('#save_info').css("display","block");
+			cerv_tick.style.display = "block";
+		}else{
+			cerv_tick.style.display = "none";
+		}
+	});
+
+	$(function(){
+			$.ajax({
+			url:"http://192.168.1.23/Ark/Insert/midwives_booking.php",
+			type:"POST",
+			data:{
+				"get_username":1,
+				"user_id":page_id
+			},
+			success: function(response){
+				$('#p_name').text(response);
+			}
+		});
+		});
+</script>
