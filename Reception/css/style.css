@@ -29,7 +29,7 @@ img{
 }
 
 #chat-icon{
-	position: relative; bottom: 30px; left: 94.5%;
+	position: relative; bottom: 10%; left: 94.5%;
 }
 
 #network_nav{
@@ -61,7 +61,7 @@ img{
 	background-color: white;
 	border-radius: 7px;
 	box-shadow: 0px 1px 5px 1px grey;
-	position: fixed; bottom: 138px; left: 75%;
+	position: fixed; bottom: 10%; left: 74%;
 }
 
 #chat-box input{
@@ -72,13 +72,13 @@ img{
 	width: 200px;
 	height: 40px;
 	border-radius: 50px;
-	position: fixed; bottom : 150px; left: 76%;
+	position: fixed; bottom : 10%; left: 75%;
 }
 
 #chat-send{
 	width: 40px;
 	height: 40px;
-	position: fixed; bottom : 153px; left: 91.5%;
+	position: fixed; bottom : 11%; left: 90.5%;
 	border-radius: 50px;
 	box-shadow: 0px 1px 5px 1px lightgreen;
 }
@@ -136,7 +136,7 @@ h1,h2,h3{
      flex-direction: row;
 	z-index: 1;
 	position: fixed;
-	width:97%;
+	width:97vw;
     margin-top:5px;
     margin-bottom:5px;
     margin-left: 5px;
@@ -166,8 +166,8 @@ h1,h2,h3{
 	justify-content: space-between; 
 	align-items:center;
 	z-index: 1;
-	position:fixed;top:637px;left:0px;
-	width:97%;
+	position:fixed;top:92%;left:0px;
+	width:97vw;
     margin-top:5px;
     margin-bottom:5px;
     margin-left: 5px;
@@ -199,7 +199,7 @@ h1,h2,h3{
 	margin-left: 5px;
 	position: fixed;
 	width: 200px;
-	height: 80%;
+	height: 82vh;
 	/*overflow: hidden;*/
 	background-color: white;
 	border-radius: 7px;
