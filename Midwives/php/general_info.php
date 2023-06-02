@@ -164,7 +164,7 @@
 
 	$(function(){
 			$.ajax({
-				url:"http://192.168.1.23/Ark/Lists/get_general.php",
+				url:"http://192.168.18.246/Ark/Lists/get_general.php",
 				type:"POST",
 				data:{
 					"get_general": 1,

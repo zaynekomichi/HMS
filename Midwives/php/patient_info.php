@@ -22,7 +22,7 @@
 	$(function(){
 
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Insert/midwives_booking.php",
+			url:"http://192.168.18.246/Ark/Insert/midwives_booking.php",
 			type:"POST",
 			data:{
 				"get_username":1,

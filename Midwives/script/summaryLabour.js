@@ -57,7 +57,7 @@ $(function(){
 		let description = $('#treatment').val();
 
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Insert/summaryLabour.php",
+			url:"http://192.168.18.246/Ark/Insert/summaryLabour.php",
 			type:"POST",
 			data:{
 				"summaryLabour":1,

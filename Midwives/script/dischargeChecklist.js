@@ -28,7 +28,7 @@ $(function(){
 		let emergency = $('#emergency').val();
 		let discharged = $('#discharged').val();
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Insert/dischargeChecklist.php",
+			url:"http://192.168.18.246/Ark/Insert/dischargeChecklist.php",
 			type:"POST",
 			data:{
 				"dischargeChecklist":1,

@@ -52,7 +52,7 @@
 
 fetch_anc();
 $(function(){
-	$('#appointment_list').load('http://192.168.1.23/Ark/Tables/appointments.php');
+	$('#appointment_list').load('http://192.168.18.246/Ark/Tables/appointments.php');
 	console.log("hey");
 });
 

@@ -1,6 +1,6 @@
 $(function(){
 		$.ajax({
-			 url:"http://192.168.1.23/Ark/Lists/get_motherDischarge.php",
+			 url:"http://192.168.18.246/Ark/Lists/get_motherDischarge.php",
 			 type:"POST",
 			 data:{
 			 	"motherDischarge":1,

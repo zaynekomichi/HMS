@@ -33,7 +33,7 @@ $(function(){
 		let dis_status = $('#dis_status').val();
 		
 		$.ajax({
-			 url:"http://192.168.1.23/Ark/Insert/motherDischarge.php",
+			 url:"http://192.168.18.246/Ark/Insert/motherDischarge.php",
 			 type:"POST",
 			 data:{
 			 	"motherDischarge":1,

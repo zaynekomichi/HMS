@@ -74,7 +74,7 @@
 <script type="text/javascript">
 $(function(){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/search_all_one.php",
+			url:"http://192.168.18.246/Ark/Lists/search_all_one.php",
 			type:"POST",
 			data:{
 				"all_one":1,
@@ -116,7 +116,7 @@ $(document).ready(function(){
 		let P2 = $('#all_one_payment_details').val();
 		let Payment_Details = P1+"\n"+P2;
 		$.ajax({
-			url : 'http://192.168.1.23/Ark/Updates/update_payment_history.php',
+			url : 'http://192.168.18.246/Ark/Updates/update_payment_history.php',
 			type: 'POST',
 			data:{
 				'data_updated': 1,

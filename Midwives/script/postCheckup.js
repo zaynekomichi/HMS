@@ -229,7 +229,7 @@
 		let nvp_d = $('#nvp_d').val();
 
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Insert/postCheckup.php",
+			url:"http://192.168.18.246/Ark/Insert/postCheckup.php",
 			type:"POST",
 			data:{
 				"postCheckup":1,

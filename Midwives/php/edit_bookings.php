@@ -39,7 +39,7 @@
 <script type="text/javascript">
 $(function(){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/search_all_one.php",
+			url:"http://192.168.18.246/Ark/Lists/search_all_one.php",
 			type:"POST",
 			data:{
 				"all_one":1,

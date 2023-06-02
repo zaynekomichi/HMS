@@ -74,7 +74,7 @@ function options_sec(number){
 function options_third(number){
 	if(number == "1"){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation",
+			url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation",
 			type:"POST",
 			data:{
 				"lock":1,
@@ -90,7 +90,7 @@ function options_third(number){
 		}});
 	}else if(number == "2"){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation",
+			url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation",
 			type:"POST",
 			data:{
 				"lock":1,
@@ -106,7 +106,7 @@ function options_third(number){
 		}});
 	}else if(number == "3"){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation",
+			url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation",
 			type:"POST",
 			data:{
 				"lock":1,
@@ -122,7 +122,7 @@ function options_third(number){
 		}});
 	}else if(number == "4"){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation",
+			url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation",
 			type:"POST",
 			data:{
 				"lock":1,
@@ -138,7 +138,7 @@ function options_third(number){
 		}});
 	}else if(number == "5"){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation",
+			url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation",
 			type:"POST",
 			data:{
 				"lock":1,
@@ -154,7 +154,7 @@ function options_third(number){
 		}});
 	}else if(number == "6"){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation",
+			url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation",
 			type:"POST",
 			data:{
 				"lock":1,
@@ -173,7 +173,7 @@ function options_third(number){
 
 function checkLocked(details_url){
 	$.ajax({
-				url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation.php",
+				url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation.php",
 				type:"POST",
 				data:{
 					"lock_sec":1,
@@ -198,7 +198,7 @@ function checkLocked(details_url){
 
 function checkEdit(details_url){
 	$.ajax({
-				url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation.php",
+				url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation.php",
 				type:"POST",
 				data:{
 					"edit_check":1,
@@ -222,7 +222,7 @@ function checkEdit(details_url){
 
 function lockFile(details_url){
 	$.ajax({
-		url:"http://192.168.1.23/Ark/Lists/get_lock_confirmation.php",
+		url:"http://192.168.18.246/Ark/Lists/get_lock_confirmation.php",
 				type:"POST",
 				data:{
 					"lock":1,

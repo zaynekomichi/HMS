@@ -93,7 +93,7 @@
 <script type="text/javascript">
   $(function(){
     $.ajax({
-        url:"http://192.168.1.23/Ark/Lists/search_all_one.php",
+        url:"http://192.168.18.246/Ark/Lists/search_all_one.php",
       type:"POST",
       data:{
         "all_one":1,
@@ -120,7 +120,7 @@ $(document).ready(function(){
     let start_time = $('#start_time').val();
     let id = $('#id').val();
     $.ajax({
-      url:'http://192.168.1.23/Ark/Updates/update_appointment.php',
+      url:'http://192.168.18.246/Ark/Updates/update_appointment.php',
       type:'POST',
       data:{
         'approve':1,
@@ -153,7 +153,7 @@ $(document).ready(function(){
     let start_time = $('#start_time').val();
    // let end_time = $('#end_time').val();
   $.ajax({
-    url:'http://192.168.1.23/Ark/Updates/update_appointment.php',
+    url:'http://192.168.18.246/Ark/Updates/update_appointment.php',
     type:'POST',
     data:{
       'insert_update': 1,

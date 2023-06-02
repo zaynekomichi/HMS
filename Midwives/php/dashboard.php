@@ -20,11 +20,11 @@
 <script type="text/javascript">
 	var user_Call =  document.getElementById('user_call');
 	var user_pic = document.getElementById('user-img');
-	user_pic.src="css/img/"+Username+".jpg";
+	user_pic.src="css/img/040-user.png";
 	$('#user_call').text(Username);
 	$(function(){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Dashboard/GetTotalAnP.php",
+			url:"http://192.168.18.246/Ark/Dashboard/GetTotalAnP.php",
 			type:"POST",
 			data:{
 				"appointments":1,
@@ -35,7 +35,7 @@
 		});
 
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Dashboard/GetTotalAnP.php",
+			url:"http://192.168.18.246/Ark/Dashboard/GetTotalAnP.php",
 			type:"POST",
 			data:{
 				"bookings":1,

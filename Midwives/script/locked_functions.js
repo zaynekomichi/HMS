@@ -1,5 +1,5 @@
 function ViewLocked(){\
-	let get_locked_details = "htpp://192.168.1.23/";
+	let get_locked_details = "htpp://192.168.18.246/";
 	
 	$.ajax({
 		url:get_locked_details+"Ark/Lists/get_lock_confirmation.php",

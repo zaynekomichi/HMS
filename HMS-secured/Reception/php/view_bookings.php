@@ -36,7 +36,7 @@ $result = mysqli_query($connect_database, "SELECT * FROM Patients ORDER BY id DE
 <script type="text/javascript">
 
 fetch_bookings();
-$('#view_bookings').load('http://192.168.1.23/Ark/Tables/view_bookings.php');
+$('#view_bookings').load('http://192.168.18.246/Ark/Tables/view_bookings.php');
 
 $(document).on('click', '.view_booking_btn', function(){
     let page_id = $(this).data('id');

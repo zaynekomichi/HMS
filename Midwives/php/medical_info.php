@@ -212,7 +212,7 @@
 <script type="text/javascript">
 	$(function(){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_medical.php",
+			url:"http://192.168.18.246/Ark/Lists/get_medical.php",
 			type:"POST",
 			data:{
 				"get_medical":1,

@@ -45,7 +45,7 @@
       <p>Onclick you will be redirected to the backup page, click go and you will be asked to save the file. Keep backup files in their own seperate
       folder, do not attempt to temper with the files, this will result in loss of data. When you need to restore the backupfiles contact your network adminstrator. </p>
       <input type="hidden" id="username_backup" value="<?php echo $user_name;?>">
-    <a href="http://192.168.1.23/phpmyadmin/server_export.php" target="_blank"><button id="backup_btn" onclick="send_backup_data()">Backup</button></a>
+    <a href="http://192.168.18.246/phpmyadmin/server_export.php" target="_blank"><button id="backup_btn" onclick="send_backup_data()">Backup</button></a>
     </div>
   </div>
   <div id="settings_confirmation">
@@ -58,13 +58,13 @@
 </div>
 <!--<script type="text/javascript" src="../HMS/script/index.js"></script>-->
 <script type="text/javascript">
-  $('#package_table').load('http://192.168.1.23/Ark/Tables/packages.php');
-  $('#method_table').load('http://192.168.1.23/Ark/Tables/method.php');
+  $('#package_table').load('http://192.168.18.246/Ark/Tables/packages.php');
+  $('#method_table').load('http://192.168.18.246/Ark/Tables/method.php');
 $(document).ready(function(){
   $('#package_add').on('click', function(){
     let package_value = $('#package_value').val();
     $.ajax({
-      url:'http://192.168.1.23/Ark/Insert/insert_acc_essentials.php',
+      url:'http://192.168.18.246/Ark/Insert/insert_acc_essentials.php',
       type:'POST',
       data:{
         'process_add':1,
@@ -89,7 +89,7 @@ $(document).ready(function(){
   $('#medical_add').on('click', function(){
     let medical_value = $('#medical_value').val();
     $.ajax({
-      url:'http://192.168.1.23/Ark/Insert/insert_acc_essentials.php',
+      url:'http://192.168.18.246/Ark/Insert/insert_acc_essentials.php',
       type:'POST',
       data:{
         'process_add2':1,
@@ -135,7 +135,7 @@ $(document).on('click', '.delete_package',  function(){
 $(document).on('click', '.delete_package',  function(){
   let id = $(this).data('id');
   $.ajax({
-    url: 'http://192.168.1.23/Ark/Delete/delete_acc_essentials.php',
+    url: 'http://192.168.18.246/Ark/Delete/delete_acc_essentials.php',
     type: 'POST',
     data:{
       'delete_package':1,
@@ -156,7 +156,7 @@ $(document).on('click', '.delete_package',  function(){
 $(document).on('click', '.delete_medical',  function(){
   let id = $(this).data('id');
   $.ajax({
-    url: 'http://192.168.1.23/Ark/Delete/delete_acc_essentials.php',
+    url: 'http://192.168.18.246/Ark/Delete/delete_acc_essentials.php',
     type: 'POST',
     data:{
       'delete_medical':1,
@@ -178,7 +178,7 @@ $(document).ready(function(){
     let settings_confirmation = document.getElementById('settings_confirmation');
     settings_confirmation.style.display = "block";
     $.ajax({
-      url:'http://192.168.1.23/Ark/Settings/settings.php',
+      url:'http://192.168.18.246/Ark/Settings/settings.php',
       type:'POST',
       data:{
         delete_cache:1,

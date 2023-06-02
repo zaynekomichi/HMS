@@ -47,7 +47,7 @@ $(function(){
 			
 			
 			$.ajax({
-				url:"http://192.168.1.23/Ark/Insert/record_labour.php",
+				url:"http://192.168.18.246/Ark/Insert/record_labour.php",
 				type:"POST",
 				data:{
 					"recordLabour":1,

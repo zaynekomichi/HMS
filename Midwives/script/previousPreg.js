@@ -144,7 +144,7 @@ $(function(){
 		let feeding_10 = $('#fph_k').val();
 
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Insert/previousPreg.php",
+			url:"http://192.168.18.246/Ark/Insert/previousPreg.php",
 			type:"POST",
 			data:{
 				"previousPreg":1,

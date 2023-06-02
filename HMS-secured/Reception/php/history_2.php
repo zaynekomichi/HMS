@@ -46,7 +46,7 @@ function f_results() {
 
         // AJAX SEARCH REQUEST
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', "http://192.168.1.23/Ark/Search/search_history_2.php", true);
+        xhr.open('POST', "http://192.168.18.246/Ark/Search/search_history_2.php", true);
         xhr.onload = function () {
           if (this.status==200) {
             var results = JSON.parse(this.response),

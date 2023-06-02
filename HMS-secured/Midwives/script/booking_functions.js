@@ -24,7 +24,7 @@ function fetch_booking_info() {
 
         // AJAX SEARCH REQUEST
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', "http://192.168.1.23/Ark/Search/anc_search.php", true);
+        xhr.open('POST', "http://192.168.18.246/Ark/Search/anc_search.php", true);
         xhr.onload = function () {
           if (this.status==200) {
             var results = JSON.parse(this.response),

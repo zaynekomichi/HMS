@@ -85,7 +85,7 @@ $(document).ready(function(){
 		let user_message = $('#chat-message').val();
 		let user_backup = $('#username_backup').val();
 		$.ajax({
-			url:'http://192.168.1.23/Ark/Chats/send_message.php',
+			url:'http://192.168.18.246/Ark/Chats/send_message.php',
 			type:'POST',
 			data:{
 				'response1':1,
@@ -94,7 +94,7 @@ $(document).ready(function(){
 			},
 			success: function(response){
 				if(response == 'saved'){
-					$("#render_chat").load("http://192.168.1.23/Ark/Chats/messages.php");
+					$("#render_chat").load("http://192.168.18.246/Ark/Chats/messages.php");
 					$('#chat-message').val("");
 				}
 			}
@@ -117,7 +117,7 @@ $(document).ready(function(){
 		let date_backup = new Date();
 		let user_backup = Username;
 		$.ajax({
-			url:'http://192.168.1.23/Ark/Insert/logout_times.php',
+			url:'http://192.168.18.246/Ark/Insert/logout_times.php',
 			type:'POST',
 			data:{
 				'response1':1,
@@ -153,7 +153,7 @@ function fetch_nav() {
 
         // AJAX SEARCH REQUEST
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', "http:192.168.1.23/Ark/Search/top_search_bar.php", true);
+        xhr.open('POST', "http:192.168.18.246/Ark/Search/top_search_bar.php", true);
         xhr.onload = function () {
           if (this.status==200) {
             var results = JSON.parse(this.response),
@@ -220,7 +220,7 @@ let compare_1;
 
 function alert_message(){
 	$.ajax({
-		url:"http:192.168.1.23/Ark/Chats/get_new_message.php",
+		url:"http:192.168.18.246/Ark/Chats/get_new_message.php",
 		type:"POST",
 		data:{
 			"NOTIFY":1,

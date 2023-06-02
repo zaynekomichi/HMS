@@ -48,7 +48,7 @@ acc_name.text(Username);
 			console.clear();
 		}else{
 			$.ajax({
-				url:'http://192.168.1.23/Ark/Accounts/acc_process.php',
+				url:'http://192.168.18.246/Ark/Accounts/acc_process.php',
 				type:'POST',
 				data:{
 					'accept':1,
@@ -90,7 +90,7 @@ acc_name.text(Username);
 				show_btn.style.display="block";
 				$('#submit_change').on('click', function(){
 					$.ajax({
-						url:'http://192.168.1.23/Ark/Accounts/acc_process.php',
+						url:'http://192.168.18.246/Ark/Accounts/acc_process.php',
 						type:"POST",
 						data:{
 							'changed':1,

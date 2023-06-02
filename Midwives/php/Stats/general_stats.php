@@ -20,7 +20,7 @@
     var array_map_weight;
    
     $.ajax({
-        url:"http://192.168.1.23/Ark/Lists/get_chart_data.php",
+        url:"http://192.168.18.246/Ark/Lists/get_chart_data.php",
         type:"POST",
         data:{
             "get_stats":1,

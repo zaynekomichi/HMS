@@ -80,7 +80,7 @@ $(document).ready(function(){
     var Payment_Details = $('#Payment_Details').val();
     var Package = $('#Package').val();
     $.ajax({
-      url: 'http://192.168.1.23/Ark/Insert/new_booking.php',
+      url: 'http://192.168.18.246/Ark/Insert/new_booking.php',
       type: 'POST',
       data:{
         'save_booking_data': 1,
@@ -168,7 +168,7 @@ function disappear_message(){
   }
 $(function(){
   $.ajax({
-    url:"http://192.168.1.23/Ark/Lists/get_acc_list.php",
+    url:"http://192.168.18.246/Ark/Lists/get_acc_list.php",
     type:"POST",
     data:{
       "package":1,
@@ -188,7 +188,7 @@ $(function(){
   });
 
  $.ajax({
-    url:"http://192.168.1.23/Ark/Lists/get_acc_list.php",
+    url:"http://192.168.18.246/Ark/Lists/get_acc_list.php",
     type:"POST",
     data:{
       "medical":1,

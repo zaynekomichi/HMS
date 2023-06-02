@@ -196,7 +196,7 @@ function fetch_anc() {
 
         // AJAX SEARCH REQUEST
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', "http://192.168.1.23/Ark/Search/anc_search.php", true);
+        xhr.open('POST', "http://192.168.18.246/Ark/Search/anc_search.php", true);
         xhr.onload = function () {
           if (this.status==200) {
             var results = JSON.parse(this.response),
@@ -239,7 +239,7 @@ function fetch_anc() {
 
 			        // AJAX SEARCH REQUEST
 			        var xhr = new XMLHttpRequest();
-			        xhr.open('POST', "http://192.168.1.23/Ark/Search/search_bookings.php", true);
+			        xhr.open('POST', "http://192.168.18.246/Ark/Search/search_bookings.php", true);
 			        xhr.onload = function () {
 			          if (this.status==200) {
 			            var results = JSON.parse(this.response),
@@ -272,7 +272,7 @@ function send_backup_data(){
 		let date_backup = new Date();
 		let user_backup = Username;
 		$.ajax({
-			url:'http://192.168.1.23/Ark/Backup/send_data.php',
+			url:'http://192.168.18.246/Ark/Backup/send_data.php',
 			type:'POST',
 			data:{
 				'response':1,
@@ -321,7 +321,7 @@ function redirect_g_business(){
 				        data.append('ajax', 1);
 
 			 var xhr = new XMLHttpRequest();
-			        xhr.open('POST', "http://192.168.1.23/Ark/Lists/get_history.php", true);
+			        xhr.open('POST', "http://192.168.18.246/Ark/Lists/get_history.php", true);
 			        xhr.onload = function () {
 			          if (this.status==200) {
 			    wrapper = document.getElementById("render_history");

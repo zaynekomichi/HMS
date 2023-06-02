@@ -116,7 +116,7 @@
 
 	$(function(){
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/search_all_one.php",
+			url:"http://192.168.18.246/Ark/Lists/search_all_one.php",
 			type:"POST",
 			data:{
 				"all_one":1,
@@ -144,7 +144,7 @@
 		});
 
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/search_all_one.php",
+			url:"http://192.168.18.246/Ark/Lists/search_all_one.php",
 			type:"POST",
 			data:{
 				"all_three":1,
@@ -168,7 +168,7 @@
 	  
 		$(function(){
 			$.ajax({
-				url:"http://192.168.1.23/Ark/Lists/confirm_id.php",
+				url:"http://192.168.18.246/Ark/Lists/confirm_id.php",
 				type:"POST",
 				data:{
 					"all_two":1,
@@ -201,7 +201,7 @@
 
 		$(function(){
 			$.ajax({
-				url:"http://192.168.1.23/Ark/Lists/confirm_id.php",
+				url:"http://192.168.18.246/Ark/Lists/confirm_id.php",
 				type:"POST",
 				data:{
 					"all_three":1,

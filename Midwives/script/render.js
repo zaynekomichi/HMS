@@ -11,7 +11,7 @@ function messages(){
       if(chatBox.style.display == "none"){
           chatBox.style.display ="block";
           function refresh_messages(){
-          $("#render_chat").load("http://192.168.1.23/Ark/Chats/messages.php");
+          $("#render_chat").load("http://192.168.18.246/Ark/Chats/messages.php");
           }
       mess = setInterval(refresh_messages, 5000);
       }else{
@@ -21,7 +21,7 @@ function messages(){
 }
   function get_name(){
           $.ajax({
-            url:"http:192.168.1.23/Ark/Chats/get_new_message.php",
+            url:"http:192.168.18.246/Ark/Chats/get_new_message.php",
             type:"POST",
             data:{
               "user":1,

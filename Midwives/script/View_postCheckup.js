@@ -2,7 +2,7 @@
 	
 		
 		$.ajax({
-			url:"http://192.168.1.23/Ark/Lists/get_postCheckup.php",
+			url:"http://192.168.18.246/Ark/Lists/get_postCheckup.php",
 			type:"POST",
 			data:{
 				"postCheckup":1,
